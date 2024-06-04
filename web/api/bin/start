@@ -1,0 +1,5 @@
+#!/bin/bash
+
+WORKDIR="/app/container/src"
+$WORKDIR/manage.py migrate
+$WORKDIR/manage.py runserver

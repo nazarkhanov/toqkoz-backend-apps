@@ -1,0 +1,59 @@
+services:
+  web-api:
+    build:
+      context: ./web/api
+      dockerfile: ./docker/dockerfile
+    ports:
+      - 6000:6000
+    volumes:
+      - ./web/api:/app/container
+    depends_on:
+      - db
+
+  web-ui:
+    build:
+      context: ./web/ui
+      dockerfile: ./docker/dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./web/ui:/app/container
+      - /app/container/src/node_modules
+    depends_on:
+      - web-api
+
+  db:
+    image: postgres:16.3
+    environment:
+      - POSTGRES_DB=local
+      - POSTGRES_USER=local
+      - POSTGRES_PASSWORD=local
+
+  tracker:
+    build:
+      context: ./tracker
+      dockerfile: ./docker/dockerfile
+    volumes:
+      - ./tracker:/app/container
+    environment:
+      - CLICKHOUSE_URL=http://click:8123/
+      - CLICKHOUSE_DATABASE=default
+    ports:
+      - 8001:8000
+
+  click:
+    image: clickhouse/clickhouse-server:23.8
+    ports:
+      - 8123:8123
+
+  android:
+    build:
+      context: ./android
+      dockerfile: ./docker/dockerfile
+    volumes:
+      - ./android:/app/container
+    environment:
+      - CLICKHOUSE_URL=http://click:8123/
+      - CLICKHOUSE_DATABASE=default
+    ports:
+      - 8000:8000

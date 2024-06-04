@@ -1,0 +1,10 @@
+[
+    {
+        "model": "system.organization",
+        "pk": "bcf4b305-ca5e-4a5c-ad33-b2ca5c77b502",
+        "fields": {
+            "name": "ТОО АлматыЭнергосбыт",
+            "status": "DISABLED"
+        }
+    }
+]

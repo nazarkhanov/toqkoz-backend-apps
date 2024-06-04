@@ -1,0 +1,4 @@
+#!/bin/bash
+
+WORKDIR="/app/container/src"
+$WORKDIR/manage.py $@

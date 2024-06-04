@@ -1,0 +1,48 @@
+[
+    {
+        "model": "system.user",
+        "pk": "e93d9d59-b4c2-40c8-9846-362382eb038e",
+        "fields": {
+            "password": "pbkdf2_sha256$600000$y0XWO8yRnPYgul5uQgl4n2$xWJhIVMzttxlpdNfxz6cIJQaPJOyebRmrq5w97czVyc=",
+            "last_login": "2023-09-02T12:32:56.670Z",
+            "is_superuser": true,
+            "is_staff": true,
+            "date_joined": "2023-09-02T12:32:46.129Z",
+            "email": "alisher@toqkoz.kz",
+            "first_name": "Алишер",
+            "last_name": "Назарханов",
+            "middle_name": "Алимжанович",
+            "identifier_number": "010625501457",
+            "phone_number": "7754499004",
+            "is_active": true,
+            "role": "ADMIN",
+            "position": "Администратор",
+            "groups": [],
+            "user_permissions": [],
+            "organization": null
+        }
+    },
+    {
+        "model": "system.user",
+        "pk": "6402e15b-37b4-4604-b20d-6e50b2f0f892",
+        "fields": {
+            "password": "pbkdf2_sha256$600000$y0XWO8yRnPYgul5uQgl4n2$xWJhIVMzttxlpdNfxz6cIJQaPJOyebRmrq5w97czVyc=",
+            "last_login": "2023-09-02T12:32:56.670Z",
+            "is_superuser": false,
+            "is_staff": true,
+            "date_joined": "2023-09-02T12:32:46.129Z",
+            "email": "kamilyam@toqkoz.kz",
+            "first_name": "Камилям",
+            "last_name": "Назарханова",
+            "middle_name": "Алимжановна",
+            "identifier_number": "030823601453",
+            "phone_number": "7714949229",
+            "is_active": true,
+            "role": "USER",
+            "position": "Дежурная",
+            "groups": [],
+            "user_permissions": [],
+            "organization": null
+        }
+    }
+]
