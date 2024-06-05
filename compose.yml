@@ -57,3 +57,12 @@ services:
       - CLICKHOUSE_DATABASE=default
     ports:
       - 8000:8000
+
+  push:
+    build:
+      context: ./push
+      dockerfile: ./docker/dockerfile
+    volumes:
+      - ./push:/app/container
+    ports:
+      - 8002:8000
